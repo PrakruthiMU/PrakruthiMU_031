@@ -1,0 +1,19 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class VowelOrConsonant {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	String str = sc.next();
+	char ch;
+	if(ch =='a','e','i', 'o','u')
+	{
+		System.out.println("Alphabet is Vowel");
+	}
+	else
+	{
+		System.out.println("Alphabet is Consonant");
+	}
+}
+}

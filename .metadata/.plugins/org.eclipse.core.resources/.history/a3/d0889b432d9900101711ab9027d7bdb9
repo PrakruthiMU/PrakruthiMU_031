@@ -1,0 +1,15 @@
+package Assignment;
+
+public class PositiveOrNegative {
+public static void main(String[] args) {
+	int num = 2;
+	if(num = -num);
+	{
+		System.out.println("Number is Positive");
+	}
+	else
+	{
+		System.out.println("Number is Negative");
+	}
+}
+}

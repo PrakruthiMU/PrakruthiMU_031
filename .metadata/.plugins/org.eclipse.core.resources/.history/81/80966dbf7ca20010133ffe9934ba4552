@@ -1,0 +1,12 @@
+package com;
+
+import java.util.Arrays;
+
+public class insertion_str {
+public static void main(String[] args) {
+	String[] fruits = {"banana","apple","cherry","zero"};
+	System.out.println("Original array "+Arrays.toString(fruits));
+	Arrays.sort(fruits);
+	System.out.println("Sorted array is:"+Arrays.toString(fruits));
+}
+}

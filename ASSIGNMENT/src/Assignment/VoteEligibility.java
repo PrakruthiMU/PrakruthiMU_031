@@ -1,0 +1,15 @@
+package Assignment;
+
+public class VoteEligibility {
+public static void main(String[] args) {
+	int vote = 20;
+	if(vote>=18)
+	{
+		System.out.println("Eligibility to vote");
+	}
+	else
+	{
+		System.out.println("Not Eligibility to vote");
+	}
+}
+}

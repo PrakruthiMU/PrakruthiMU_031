@@ -1,0 +1,28 @@
+package com;
+
+public class Selecction_sort {
+public static void main(String[] args) {
+	int arr[] = {29, 10, 14, 37, 13};
+		int n = arr.length;
+	int swapCount = 0;
+	for(int i = 0; i<n-1; i++) {
+		int minindex = i;
+		for(int  j = i+1; j<n;j++) {
+			if(arr[j]<arr[minindex]) {
+			minindex = j;
+		}
+	}
+		if(minindex!=i) {
+			int temp = arr[i];
+			arr[i] =  arr[minindex];
+			arr[minindex] = temp;
+			swapCount++;
+		}
+}
+	System.out.print("Sorted array:");
+	for(int num : arr) {
+		System.out.print(num+"");
+	}
+	System.out.println("\nTotal swaps:"+swapCount);
+}
+}

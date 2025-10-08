@@ -1,0 +1,44 @@
+package com;
+
+public class quick_sort {
+public static void quicksort(int arr[], int si, int ei) {
+	if(si >= ei)
+		return;
+	int pIdx = partition(arr, si, ei);
+	quicksort(arr,  si, pIdx - 1);
+	quicksort(arr, pIdx + 1, ei);
+}
+public static int partition(int arr[],int si,int ei) {
+	int pivot = arr[ei];
+	int i = si - 1;
+	
+	for(int j = si; j < ei; j++) {
+		if(arr[j] <= pivot) {
+			i++;
+			int temp = arr[i];
+			arr[i]=arr[j];
+			arr[j]=temp;
+		}
+	}
+	i++;
+	int temp = arr[i];;
+	arr[i]=arr[ei];
+	arr[ei]=temp;
+	return i;
+}
+public static void printArr(int arr[]) {
+	for(int val : arr)
+		System.out.print(val + " ");
+	System.out.println();
+} 
+public static void main(String[] args) {
+	int arr[] = {6, 3, 9, 8, 2, 5};
+	System.out.println("original Array:");
+	printArr(arr);
+	
+	quicksort(arr, 0, arr.length - 1);
+	
+	System.out.println("Sorted Arraay:");
+	printArr(arr);
+}
+}
